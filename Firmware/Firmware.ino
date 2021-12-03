@@ -121,9 +121,6 @@ void setup() {
   timecoreconf_t cfg = read_timecoreconf();
   timec.SetConfig(cfg);
   
-  // This creates a new task bound to the APP CPU
-  //xTaskCreatePinnedToCore(Display_Task, "Display_Task",10000,NULL, 1, NULL, 1);
-  
   // This delay the boot for a few seconds and will erase all config if the boot btn is pressed
   Serial.println(F("Booting...."));
   
