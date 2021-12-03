@@ -40,6 +40,7 @@ Let's break this down into two sections - first on getting the code prepped to i
 
 
 ---WORKSPACE
+
 Setup the Arduino IDE documented (https://www.arduino.cc/en/software)(https://www.arduino.cc/en/Guide).  Arduino IDE used for this build was 1.8.16.
 
 Confirm and/or install the following libraries within the IDE:
@@ -68,6 +69,7 @@ Install the Board in Arduino IDE
 - Set your Arduino IDE to the correct board.  Under tools > ESP32 Arduino >  "Adafruit ESP32 Feather"
 
 ---SETUP---
+
 Connect just the ESP32 board to the computer.  Select the correct COM port that connects to the ESP32 board.
 
 Open Serial Montior and set the baud rate to 921600.
