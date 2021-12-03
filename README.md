@@ -102,4 +102,4 @@ After a lock has been found, you can connect to the webpage on the LAN to see th
 
 Initial starting point was firwmare found at https://www.elektormagazine.com/labs/mini-ntp-server-with-gps.
 
-Big thank you to my wife to getting me started and doing the soldering and figuring out a number of software issues from the intial starting above to our hardware and arduino IDE.  Definitely my better half :)
+Big thank you to my wife to getting me started and doing the soldering and figuring out a number of software issues between our intial starting point above and our hardware and arduino IDE.  Definitely my better half :)
