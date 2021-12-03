@@ -74,7 +74,7 @@ Connect just the ESP32 board to the computer.  Select the correct COM port that 
 
 Open Serial Montior and set the baud rate to 921600.
 
-Hard reset the ESP32 by holding down the reset button for at least 10 seconds.  
+Hard reset the ESP32 by holding down the reset button for at least 5 seconds.  
 
 Under tools, click "ESP32 Sketch Data Upload".  This should initiate the upload of content within the "data" directory into the ESP32's SPIFFS
 
