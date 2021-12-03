@@ -93,3 +93,10 @@ Connect the battery to the device and set it outside on a clear day and about 5 
 You should be able to press the buttons on the screen to cycle to the GPS information.  This will tell you if a lock has been found.
 
 After a lock has been found, you can connect to the webpage on the LAN to see the advertised time that is as expected and it should be ready to service NTP requests on the LAN.
+
+
+
+---RECOGNITIONS---
+Initial starting point was firwmare found at https://www.elektormagazine.com/labs/mini-ntp-server-with-gps.
+
+Big thank you to my wife to getting me started and doing the soldering and figuring out a number of software issues from the intial starting above to our hardware and arduino IDE.  Definitely my better half :)
