@@ -26,9 +26,8 @@
 #include <TimeLib.h>
 #include <Ticker.h>
 #include <TinyGPSPlus.h>
-#include "RTClib.h"
+#include <RTClib.h>
 #include <HardwareSerial.h>
-#include <U8g2lib.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include "ArduinoJson.h"
