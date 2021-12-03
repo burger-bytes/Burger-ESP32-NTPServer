@@ -2,7 +2,7 @@
 NTP Server using ESP32 hardware
 
 
-Hello!  This is a side project built for fun from a request from a colleague.  This was built by my wife and I for fun.
+Hello!  This was a project from a request from a colleague.  This was built by my wife and I for fun.
 
 First and foremost, we do not intend to maintain this software.  When the hardware and/or supporting software changes over time, we will not update this code.  Use at your own risk!
 
@@ -28,7 +28,7 @@ Currently, the NTP server is in a stacked configuration (top-down):
 
 You could also use a feather breadboard, but the stacked setup has less soldering requirements.  We will eventually upload a .STL file for a printable box that holds all the hardware components.  
 
-**We have been using the right-angle mini gsm/cellular antenna, but we would recommend to try out adafruit's external active antenna (https://www.adafruit.com/product/960) - 10 watt draw for 5 meters of cable length + magnetic antenna seems like it would be better suited for the project.  We have not tested this other antenna.  It should only be a benefit in theory.
+**We have been using the right-angle mini gsm/cellular antenna, but we would recommend to try out adafruit's external active antenna (https://www.adafruit.com/product/960) - 10 watt draw for 5 meters of cable length + magnetic antenna seems like it would be better suited for the project.  We have not tested this other antenna.  In theory, it should be a substantial benefit.
 
 
 
