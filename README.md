@@ -105,61 +105,70 @@ The initial code we got together from Elektor and other sources did not match th
 Let's cover this chronologically as we worked through them:
 
 Changed:
-uint32_t RTC_ReadUnixTimeStamp(bool* delayed_result){
-  DateTime now = 0;
+
+	uint32_t RTC_ReadUnixTimeStamp(bool* delayed_result){
+	  DateTime now = 0;
 
 To:
-uint32_t RTC_ReadUnixTimeStamp(bool* delayed_result){
-  DateTime now = (0,0,0,0,0,0);
+
+	uint32_t RTC_ReadUnixTimeStamp(bool* delayed_result){
+	  DateTime now = (0,0,0,0,0,0);
 
 Reason:
 	Wouldn't compile otherwise.  Initialize a new instance of the DateTime structure to zeroed year, month, day, hour, minute, and second.
 	
 Removed:
- xTaskCreatePinnedToCore(
-   Display_Task,
-   "Display_Task",
-   10000,
-   NULL,
-   1,
-   NULL,
-   1);
+
+	 xTaskCreatePinnedToCore(
+	   Display_Task,
+	   "Display_Task",
+	   10000,
+	   NULL,
+	   1,
+	   NULL,
+	   1);
 
 Reason:
 	This caused issues with DS3231 from being connected to and read by the ESP32 board.  Additionally, we do not plan on using their methodology for displaying data on screen.
 	
 Changed:
-  /* We reassign the I2C Pins to 4 and 5 with 100kHz */
-  Wire.begin(5,4,100000);
 
-  /* This will check if the RTC is on the I2C */
-  Wire.beginTransmission(0x68);
-  if(Wire.endTransmission() == 0 ){
+  	/* We reassign the I2C Pins to 4 and 5 with 100kHz */
+	Wire.begin(5,4,100000);
+
+  	/* This will check if the RTC is on the I2C */
+  	Wire.beginTransmission(0x68);
+  	if(Wire.endTransmission() == 0 ){
 
 To:
-  if(! rtc.begin()){
+
+  	if(! rtc.begin()){
   
 Reason:
 	We do not need to call a hardware serial to reach the DS3231 in this manner.  The current RTC library allws one to just call it with rtc.begin().
 	
 Removed:
-  /* We setup the PPS Pin as interrupt source */
-  pinMode(interruptPin, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(interruptPin), handlePPSInterrupt, RISING);
+
+	/* We setup the PPS Pin as interrupt source */
+	pinMode(interruptPin, INPUT_PULLUP);
+  	attachInterrupt(digitalPinToInterrupt(interruptPin), handlePPSInterrupt, RISING);
   
 Reason:
 	This is unnecessary, even the PPS configuration in general i think is unnecessary.  RTC library + Adafruit board design handles the PPS interrupt for you if you need it.
 
 Changed:
-    int16_t Data = hws.read();
+
+	int16_t Data = hws.read();
 	  
 To:
+
 	char Data = GPSSerial.read();
 	
 Reason:
 	Should be declared as a char because that's what the GPS device is giving us.
 	
 Chnaged:
+
 	//U8G2_SSD1306_128X64_NONAME_F_HW_I2C oled_left(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
 	//U8G2_SSD1306_128X64_NONAME_F_HW_I2C oled_right(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
 	
@@ -169,6 +178,7 @@ Chnaged:
 	U8G2_SSD1306_128X64_NONAME_F_HW_I2C* oled_ptr=NULL;
 
 To:
+
 	Adafruit_SSD1306 display = Adafruit_SSD1306(128, 32, &Wire);
 
 Reason:
