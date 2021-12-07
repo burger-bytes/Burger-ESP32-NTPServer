@@ -172,7 +172,7 @@ Reason:
 
 Should be declared as a char because that's what the GPS device is giving us.
 	
-Chnaged:
+Changed:
 
 	//U8G2_SSD1306_128X64_NONAME_F_HW_I2C oled_left(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
 	//U8G2_SSD1306_128X64_NONAME_F_HW_I2C oled_right(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
