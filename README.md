@@ -96,7 +96,7 @@ You should be able to press the buttons on the screen to cycle to the GPS inform
 
 After a lock has been found, you can connect to the webpage on the LAN to see the advertised time that is as expected and it should be ready to service NTP requests on the LAN.
 
----CODE---
+---CHANGES---
 
 For those that want to see more specifics we've worked through, keep reading, otherwise, skip this.
 
