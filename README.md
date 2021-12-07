@@ -115,7 +115,8 @@ To:
 	  DateTime now = (0,0,0,0,0,0);
 
 Reason:
-	Wouldn't compile otherwise.  Initialize a new instance of the DateTime structure to zeroed year, month, day, hour, minute, and second.
+
+Wouldn't compile otherwise.  Initialize a new instance of the DateTime structure to zeroed year, month, day, hour, minute, and second.
 	
 Removed:
 
@@ -129,7 +130,8 @@ Removed:
 	   1);
 
 Reason:
-	This caused issues with DS3231 from being connected to and read by the ESP32 board.  Additionally, we do not plan on using their methodology for displaying data on screen.
+
+This caused issues with DS3231 from being connected to and read by the ESP32 board.  Additionally, we do not plan on using their methodology for displaying data on screen.
 	
 Changed:
 
@@ -145,7 +147,8 @@ To:
   	if(! rtc.begin()){
   
 Reason:
-	We do not need to call a hardware serial to reach the DS3231 in this manner.  The current RTC library allws one to just call it with rtc.begin().
+
+We do not need to call a hardware serial to reach the DS3231 in this manner.  The current RTC library allws one to just call it with rtc.begin().
 	
 Removed:
 
@@ -154,7 +157,8 @@ Removed:
   	attachInterrupt(digitalPinToInterrupt(interruptPin), handlePPSInterrupt, RISING);
   
 Reason:
-	This is unnecessary, even the PPS configuration in general i think is unnecessary.  RTC library + Adafruit board design handles the PPS interrupt for you if you need it.
+
+This is unnecessary, even the PPS configuration in general i think is unnecessary.  RTC library + Adafruit board design handles the PPS interrupt for you if you need it.
 
 Changed:
 
@@ -165,7 +169,8 @@ To:
 	char Data = GPSSerial.read();
 	
 Reason:
-	Should be declared as a char because that's what the GPS device is giving us.
+
+Should be declared as a char because that's what the GPS device is giving us.
 	
 Chnaged:
 
@@ -182,11 +187,13 @@ To:
 	Adafruit_SSD1306 display = Adafruit_SSD1306(128, 32, &Wire);
 
 Reason:
-	Using the Adafruit GFX library greatly simplifies are code.  Just call in via the SSD1306 library.  Note that if you want to use the 128x64 OLED, this library and this call needs to change.
+
+Using the Adafruit GFX library greatly simplifies are code.  Just call in via the SSD1306 library.  Note that if you want to use the 128x64 OLED, this library and this call needs to change.
 	
 
 Added:
-	Basically anything with buttons and OLED display was added by us.  Something of note, I had a heck of a time wrapping my mind around buttons and arduino, but following the examples for the Adafruit display library made things easier to get straight.
+
+Basically anything with buttons and OLED display was added by us.  Something of note, I had a heck of a time wrapping my mind around buttons and arduino, but following the examples for the Adafruit display library made things easier to get straight.
 
 
 ---RECOGNITIONS---
