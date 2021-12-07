@@ -39,7 +39,7 @@ Before we begin, we would like to say we are not C++ developers by trade.  My wi
 Let's break this down into two sections - first on getting the code prepped to install.  Second, some specific parts of this that my wife and I worked through.
 
 
----WORKSPACE
+---WORKSPACE---
 
 Setup the Arduino IDE documented (https://www.arduino.cc/en/software)(https://www.arduino.cc/en/Guide).  Arduino IDE used for this build was 1.8.16.
 
@@ -100,7 +100,7 @@ After a lock has been found, you can connect to the webpage on the LAN to see th
 
 For those that want to see more specifics we've worked through, keep reading, otherwise, skip this.
 
-The initial code we got together from Elektor and other sources did not match the hardware that we wanted to use.  ESP8266 is similar to ESP32, but not the same.  Additionally, the code from Elektor is relatively old and some functionality can be written a bit more simply as methods/libraries were merged into the Arduino base (e.g. Ticker librar).
+The initial code we got together from Elektor and other sources did not match the hardware that we wanted to use.  ESP8266 is similar to ESP32, but not the same.  Additionally, the code from Elektor is relatively old and some functionality can be written a bit more simply as methods/libraries were merged into the Arduino base (e.g. Ticker library).
 
 Let's cover this chronologically as we worked through them:
 
@@ -148,7 +148,7 @@ To:
   
 Reason:
 
-We do not need to call a hardware serial to reach the DS3231 in this manner.  The current RTC library allws one to just call it with rtc.begin().
+We do not need to call a hardware serial to reach the DS3231 in this manner.  The current RTC library allows one to just call it with rtc.begin().
 	
 Removed:
 
