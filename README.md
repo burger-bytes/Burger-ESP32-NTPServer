@@ -188,7 +188,7 @@ To:
 
 Reason:
 
-Using the Adafruit GFX library greatly simplifies are code.  Just call in via the SSD1306 library.  Note that if you want to use the 128x64 OLED, this library and this call needs to change.
+Using the Adafruit GFX library greatly simplifies the code.  Just call in via the SSD1306 library.  Note that if you want to use the 128x64 OLED, this library and this call needs to change.
 	
 
 Added:
