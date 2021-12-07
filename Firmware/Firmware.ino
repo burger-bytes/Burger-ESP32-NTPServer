@@ -221,10 +221,6 @@ void setup() {
   
   // Now we start with the config for the Timekeeping and sync 
   TimeKeeper.attach_ms(200, _200mSecondTick);
-
-  // We setup the PPS Pin as interrupt source 
-  //pinMode(interruptPin, INPUT_PULLUP);
-  //attachInterrupt(digitalPinToInterrupt(interruptPin), handlePPSInterrupt, RISING);
  
   //hws.begin(GPSBAUD ,SERIAL_8N1,17,16); // 17->RX , 16->TX
   GPSSerial.begin(9600);
